@@ -23,7 +23,6 @@ jobs:
         repository: "Painkiller1991/QueueClient"
         latest: true
         fileName: "*"
-        out-file-path: ""
         token: ${{ secrets.QUEUECLIENT }}
     - name: Publish
       uses: xresloader/upload-to-github-release@v1
