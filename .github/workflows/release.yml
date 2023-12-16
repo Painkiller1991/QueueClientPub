@@ -28,7 +28,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "*.*"
+        file: ${{ GITHUB_WORKSPACE }}
         tags: false
         draft: false
       
