@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Upload binaries to release
+    - name: Download and publish
       uses: robinraju/release-downloader@v1.8
       with:
         repository: "Painkiller1991/QueueClient"
@@ -24,7 +24,6 @@ jobs:
         fileName: "*"
         out-file-path: "my-downloads"
         token: ${{ secrets.QUEUECLIENT }}
-    - name: Publish
       uses: xresloader/upload-to-github-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
