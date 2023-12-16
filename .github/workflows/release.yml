@@ -24,3 +24,12 @@ jobs:
         fileName: "*"
         out-file-path: "target/release"
         token: ${{ secrets.QUEUECLIENT }}
+    - name: Publish
+      uses: xresloader/upload-to-github-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        file: "*.md"
+        tags: true
+        draft: false
+      
