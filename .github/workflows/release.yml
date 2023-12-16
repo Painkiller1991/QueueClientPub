@@ -22,14 +22,14 @@ jobs:
         repository: "Painkiller1991/QueueClient"
         latest: true
         fileName: "*"
-        out-file-path: "${{ github.workspace }}\\my-downloads"
+        out-file-path: ""
         token: ${{ secrets.QUEUECLIENT }}
     - name: Publish
       uses: xresloader/upload-to-github-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "${{ github.workspace }}\\my-downloads\\*.*"
+        file: "${{ github.workspace }}\\*"
         tags: false
         draft: false
       
