@@ -22,4 +22,5 @@ jobs:
         repository: "Painkiller1991/QueueClient"
         latest: true
         fileName: "*"
+        out-file-path: "target/release"
         token: ${{ secrets.QUEUECLIENT }}
