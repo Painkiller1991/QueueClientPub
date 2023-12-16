@@ -28,7 +28,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "queueclient*.*"
+        file: "*.*"
         tags: false
         draft: false
       
