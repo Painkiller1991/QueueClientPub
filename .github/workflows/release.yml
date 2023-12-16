@@ -17,6 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Download
+      id: download
       uses: robinraju/release-downloader@v1.8
       with:
         repository: "Painkiller1991/QueueClient"
@@ -29,7 +30,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: "${{ steps.create_release.outputs.upload_url }}"
+        file: "${{ steps.download.outputs.upload_url }}"
         tags: false
         draft: false
       
